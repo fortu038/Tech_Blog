@@ -6,13 +6,15 @@ const { Post, Comment, User } = require('../../models');
 router.get("/", async (req,res) => {
     try {
         const userData = await User.findAll({
-            include: {
-
-            }
-        })
+            include: [
+                {model: Post},
+                {model: Comment}
+            ],
+        });
+        res.status(200).json(userData);
     }
-    catch {
-
+    catch (err) {
+        res.status(500).json(err);
     }
 });
 
@@ -35,7 +37,7 @@ router.get('/:id', async (req, res) => {
     catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 router.post("/login", async (req,res) => {
     try {
@@ -103,7 +105,7 @@ router.put('/:id', async (req, res) => {
         })
 
         if (!userData[0]) {
-        res.status(404).json({message: "Not valid user!"});
+        res.status(404).json({message: "Not a valid user ID!"});
         return;
         }
 
