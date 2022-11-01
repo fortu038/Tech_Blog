@@ -1,27 +1,27 @@
 [
     {
         "name": "1 title",
-        "text": "post 1",
+        "text": "post 1 text",
         "user_id": 1
     },
     {
         "name": "2 title",
-        "text": "post 2",
+        "text": "post 2 text",
         "user_id": 2
     },
     {
         "name": "3 title",
-        "text": "post 3",
+        "text": "post 3 text",
         "user_id": 3
     },
     {
         "name": "4 title",
-        "text": "post 4",
+        "text": "post 4 text",
         "user_id": 4
     },
     {
         "name": "5 title",
-        "text": "post 5",
+        "text": "post 5 text",
         "user_id": 5
     }
 ]

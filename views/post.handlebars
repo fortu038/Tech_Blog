@@ -2,7 +2,11 @@
   <h2>{{post.name}}</h2>
   <p>{{text}}</p>
   <p>Created by {{user.name}}</p>
+  {{#if logged_in}}
   <p>
     <button class="btn btn-primary">Comment on this post</button>
   </p>
+  {{/if}}
 </div>
+
+<script src="./js/post"></script>
